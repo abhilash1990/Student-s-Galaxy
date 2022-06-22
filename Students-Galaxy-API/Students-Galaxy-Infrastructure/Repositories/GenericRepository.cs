@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Students_Galaxy_Infrastructure.Contexts;
+﻿using Students_Galaxy_Infrastructure.Contexts;
 using System.Linq.Expressions;
 
 namespace Students_Galaxy_Infrastructure.Repositories
@@ -30,12 +29,22 @@ namespace Students_Galaxy_Infrastructure.Repositories
 
         public IEnumerable<T> GetAll()
         {
-            return _context.Set<T>().ToList();
+            return _context.Set<T>();
         }
 
         public T GetById(int id)
         {
             return _context.Set<T>().Find(id);
+        }
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+        }
+
+        public void UpdateRange(IEnumerable<T> entities)
+        {
+            _context.Set<T>().UpdateRange(entities);
         }
 
         public void Remove(T entity)

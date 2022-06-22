@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Students_Galaxy_Application;
+using Students_Galaxy_Common.ServiceResponse;
 using Students_Galaxy_Infrastructure.Data;
-using Students_Galaxy_Infrastructure.UnitofWork;
 
 namespace Students_Galaxy_API.Controllers
 {
@@ -9,18 +10,33 @@ namespace Students_Galaxy_API.Controllers
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
-        private readonly UnitOfWork _unitofWork;
+        private readonly IProductHandler _productManagement;
 
-        public ProductController(ILogger<ProductController> logger, UnitOfWork unitofWork)
+        public ProductController(ILogger<ProductController> logger, IProductHandler productManagement)
         {
             _logger = logger;
-            _unitofWork = unitofWork;
+            _productManagement = productManagement;
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetProducts()
+        public ServiceResponse GetProducts()
         {
-            return _unitofWork.ProductRepository.GetAll();
+            var products = _productManagement.GetProducts();
+            return ResponseType.Success(products);
+        }
+
+        [HttpPost]
+        public ServiceResponse AddProducts([FromBody] Product product)
+        {
+            var result = _productManagement.AddProduct(product);
+            return ResponseType.Success(result);
+        }
+
+        [HttpPut]
+        public ServiceResponse UpdateProducts([FromBody] Product product)
+        {
+            var result = _productManagement.UpdateProduct(product);
+            return ResponseType.Success(result);
         }
     }
 }

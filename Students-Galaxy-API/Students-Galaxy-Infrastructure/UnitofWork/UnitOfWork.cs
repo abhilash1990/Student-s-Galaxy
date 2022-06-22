@@ -1,5 +1,4 @@
 ﻿using Students_Galaxy_Infrastructure.Contexts;
-using Students_Galaxy_Infrastructure.Data;
 using Students_Galaxy_Infrastructure.Repositories;
 
 namespace Students_Galaxy_Infrastructure.UnitofWork
@@ -7,7 +6,7 @@ namespace Students_Galaxy_Infrastructure.UnitofWork
     public class UnitOfWork
     {
         private InventoryManagementContext _context;
-        public IProductRepository productRepository { get; private set; }
+        private IProductRepository productRepository { get; set; }
 
         public UnitOfWork(InventoryManagementContext context)
         {
@@ -26,9 +25,9 @@ namespace Students_Galaxy_Infrastructure.UnitofWork
             }
         }
 
-        public void Save()
+        public int Save()
         {
-            _context.SaveChanges();
+            return _context.SaveChanges();
         }
 
         private bool disposed = false;

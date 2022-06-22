@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Students-Galaxy-Common\Students-Galaxy-Common.csproj" />
+    <ProjectReference Include="..\Students-Galaxy-Domain\Students-Galaxy-Domain.csproj" />
+    <ProjectReference Include="..\Students-Galaxy-Infrastructure\Students-Galaxy-Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Galaxy-Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Galaxy-Infrastructure", "Students-Galaxy-Infrastructure\Students-Galaxy-Infrastructure.csproj", "{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Galaxy-Common", "Students-Galaxy-Common\Students-Galaxy-Common.csproj", "{CC65BC9E-8FF3-497C-BE9A-DB45A8B19AD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC65BC9E-8FF3-497C-BE9A-DB45A8B19AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC65BC9E-8FF3-497C-BE9A-DB45A8B19AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC65BC9E-8FF3-497C-BE9A-DB45A8B19AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC65BC9E-8FF3-497C-BE9A-DB45A8B19AD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

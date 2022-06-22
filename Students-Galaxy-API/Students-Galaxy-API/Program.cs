@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Students_Galaxy_Infrastructure;
+using Students_Galaxy_Application;
+using Students_Galaxy_Domain;
 using Students_Galaxy_Infrastructure.Contexts;
-using Students_Galaxy_Infrastructure.Repositories;
 using Students_Galaxy_Infrastructure.UnitofWork;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +19,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<UnitOfWork>();
+builder.Services.AddTransient<IProductHandler, ProductHandler>();
+builder.Services.AddTransient<IProductManagement, ProductManagement>();
 
 var app = builder.Build();
 
