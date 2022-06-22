@@ -5,3 +5,9 @@
 /Students-Galaxy-API/Students-Galaxy-API/bin
 /Students-Galaxy-API/Students-Galaxy-API/obj
 *.user
+/Students-Galaxy-API/Students-Galaxy-Infrastructure/bin
+/Students-Galaxy-API/Students-Galaxy-Infrastructure/obj
+/Students-Galaxy-API/Students-Galaxy-Domain/bin
+/Students-Galaxy-API/Students-Galaxy-Domain/obj
+/Students-Galaxy-API/Students-Galaxy-Application/bin
+/Students-Galaxy-API/Students-Galaxy-Application/obj

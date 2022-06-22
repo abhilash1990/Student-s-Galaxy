@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Galaxy-API", "Students-Galaxy-API\Students-Galaxy-API.csproj", "{0FF691E2-22E0-48A6-9C34-B517E55FAF28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Students-Galaxy-API", "Students-Galaxy-API\Students-Galaxy-API.csproj", "{0FF691E2-22E0-48A6-9C34-B517E55FAF28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Galaxy-Domain", "Students-Galaxy-Domain\Students-Galaxy-Domain.csproj", "{8A0191CD-68F2-48B2-939A-CFC26DA1BE5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Galaxy-Application", "Students-Galaxy-Application\Students-Galaxy-Application.csproj", "{5092FA5B-87BE-4300-950C-997A09DFC14C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Galaxy-Infrastructure", "Students-Galaxy-Infrastructure\Students-Galaxy-Infrastructure.csproj", "{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{0FF691E2-22E0-48A6-9C34-B517E55FAF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FF691E2-22E0-48A6-9C34-B517E55FAF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FF691E2-22E0-48A6-9C34-B517E55FAF28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A0191CD-68F2-48B2-939A-CFC26DA1BE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A0191CD-68F2-48B2-939A-CFC26DA1BE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A0191CD-68F2-48B2-939A-CFC26DA1BE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A0191CD-68F2-48B2-939A-CFC26DA1BE5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5092FA5B-87BE-4300-950C-997A09DFC14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5092FA5B-87BE-4300-950C-997A09DFC14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5092FA5B-87BE-4300-950C-997A09DFC14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5092FA5B-87BE-4300-950C-997A09DFC14C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E56EEB1-6EE7-4636-BAB3-F9E32D853C4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
