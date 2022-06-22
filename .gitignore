@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Students-Galaxy-API/Students-Galaxy-API/bin
+/Students-Galaxy-API/Students-Galaxy-API/obj
