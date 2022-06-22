@@ -1,1 +1,1 @@
-# Student-s-Galaxy
+# Students-Galaxy
