@@ -5,22 +5,24 @@ using Students_Galaxy_Infrastructure.Contexts;
 using Students_Galaxy_Infrastructure.UnitofWork;
 
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+var configuration = builder.Configuration;
+var env = builder.Environment;
 
 // Add services to the container.
-IConfiguration configuration = builder.Configuration;
 
-builder.Services.AddDbContext<InventoryManagementContext>(options =>
+services.AddDbContext<InventoryManagementContext>(options =>
 options.UseSqlServer(configuration.GetConnectionString("StudentsGalaxyDb")));
 
-builder.Services.AddControllers();
+services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+services.AddEndpointsApiExplorer();
+services.AddSwaggerGen();
 
-builder.Services.AddScoped<UnitOfWork>();
-builder.Services.AddTransient<IProductHandler, ProductHandler>();
-builder.Services.AddTransient<IProductManagement, ProductManagement>();
+services.AddScoped<UnitOfWork>();
+services.AddTransient<IProductHandler, ProductHandler>();
+services.AddTransient<IProductManagement, ProductManagement>();
 
 var app = builder.Build();
 
@@ -30,6 +32,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

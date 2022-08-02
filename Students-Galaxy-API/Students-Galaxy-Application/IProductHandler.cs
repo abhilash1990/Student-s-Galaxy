@@ -4,9 +4,9 @@ namespace Students_Galaxy_Application
 {
     public interface IProductHandler
     {
-        public IEnumerable<Product> GetProducts();
-        public int AddProduct(Product product);
-        public int UpdateProduct(Product product);
-        public int RemoveProduct(Product product);
+        public IEnumerable<ProductMaster> GetProducts();
+        public int AddProduct(ProductMaster product);
+        public int UpdateProduct(ProductMaster product);
+        public int RemoveProduct(ProductMaster product);
     }
 }

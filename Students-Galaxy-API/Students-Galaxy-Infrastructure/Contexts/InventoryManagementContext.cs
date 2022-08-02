@@ -7,11 +7,20 @@ namespace Students_Galaxy_Infrastructure.Contexts
     {
         public InventoryManagementContext(DbContextOptions<InventoryManagementContext> options) : base(options) { }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductMaster> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>().ToTable("Product");
+            modelBuilder.Entity<ProductMaster>().ToTable("ProductMaster");
+            modelBuilder.Entity<Supplier>().ToTable("Supplier");
+            modelBuilder.Entity<Purchase>().ToTable("Purchase");
+            modelBuilder.Entity<PurchaseDetail>().ToTable("PurchaseDetail");
+            modelBuilder.Entity<Customer>().ToTable("Customer");
+            modelBuilder.Entity<Order>().ToTable("Order");
+            modelBuilder.Entity<OrderDetail>().ToTable("OrderDetail");
         }
     }
 }

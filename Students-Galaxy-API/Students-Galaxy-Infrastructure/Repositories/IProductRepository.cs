@@ -2,7 +2,7 @@
 
 namespace Students_Galaxy_Infrastructure.Repositories
 {
-    public interface IProductRepository : IGenericRepository<Product>
+    public interface IProductRepository : IGenericRepository<ProductMaster>
     {
     }
 }

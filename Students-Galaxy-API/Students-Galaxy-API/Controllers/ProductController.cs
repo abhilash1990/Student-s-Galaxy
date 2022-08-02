@@ -10,32 +10,32 @@ namespace Students_Galaxy_API.Controllers
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
-        private readonly IProductHandler _productManagement;
+        private readonly IProductHandler _productHandler;
 
-        public ProductController(ILogger<ProductController> logger, IProductHandler productManagement)
+        public ProductController(ILogger<ProductController> logger, IProductHandler productHandler)
         {
             _logger = logger;
-            _productManagement = productManagement;
+            _productHandler = productHandler;
         }
 
         [HttpGet]
         public ServiceResponse GetProducts()
         {
-            var products = _productManagement.GetProducts();
+            var products = _productHandler.GetProducts();
             return ResponseType.Success(products);
         }
 
         [HttpPost]
-        public ServiceResponse AddProducts([FromBody] Product product)
+        public ServiceResponse AddProducts([FromBody] ProductMaster product)
         {
-            var result = _productManagement.AddProduct(product);
+            var result = _productHandler.AddProduct(product);
             return ResponseType.Success(result);
         }
 
         [HttpPut]
-        public ServiceResponse UpdateProducts([FromBody] Product product)
+        public ServiceResponse UpdateProducts([FromBody] ProductMaster product)
         {
-            var result = _productManagement.UpdateProduct(product);
+            var result = _productHandler.UpdateProduct(product);
             return ResponseType.Success(result);
         }
     }

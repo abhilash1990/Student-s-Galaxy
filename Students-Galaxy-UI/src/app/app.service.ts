@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { catchError, map } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap, Observable, of } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  })
+};
 
 @Injectable()
 export class AppService {
@@ -8,10 +15,18 @@ export class AppService {
   constructor(private http: HttpClient) { }
 
   getAction(url: string) {
-    return this.http.get(url).pipe(
+    return this.http.get(url, httpOptions).pipe(
       map((response: any) => response.responseData),
-      // tap(_ => { }),
-      // catchError(this.)
+      tap(next => { }),
+      catchError(this.handleError())
     );
   }
+
+  private handleError<T>() {
+    return (error: any): Observable<T> => {
+
+      return of(error as T)
+    };
+  }
+
 }

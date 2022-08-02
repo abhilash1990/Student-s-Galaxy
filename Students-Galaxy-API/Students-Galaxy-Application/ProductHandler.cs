@@ -15,24 +15,24 @@ namespace Students_Galaxy_Application
             _productManagement = productManagement;
         }
 
-        public IEnumerable<Product> GetProducts()
+        public IEnumerable<ProductMaster> GetProducts()
         {
             return _unitofWork.ProductRepository.GetAll();
         }
 
-        public int AddProduct(Product product)
+        public int AddProduct(ProductMaster product)
         {
             _unitofWork.ProductRepository.Add(product);
             return _unitofWork.Save();
         }
 
-        public int UpdateProduct(Product product)
+        public int UpdateProduct(ProductMaster product)
         {
             _unitofWork.ProductRepository.Update(product);
             return _unitofWork.Save();
         }
 
-        public int RemoveProduct(Product product)
+        public int RemoveProduct(ProductMaster product)
         {
             _unitofWork.ProductRepository.Remove(product);
             return _unitofWork.Save();
